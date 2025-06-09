@@ -1,5 +1,5 @@
 /* responsive.css - Media queries and responsive design */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .card {
         padding: 30px 20px;
         margin: 10px;
@@ -23,7 +23,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     .landing-title {
         font-size: 2rem;
     }
