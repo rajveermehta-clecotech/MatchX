@@ -3,11 +3,11 @@ const Submission = {
     async submitResults() {
         const submitButton = document.getElementById('submitButton');
         const originalText = submitButton.innerHTML;
-        
+
         this.showLoadingState(submitButton);
-        
+
         const submissionData = this.prepareData();
-        
+
         try {
             await this.sendData(submissionData);
             this.showSuccess(submitButton);
@@ -31,11 +31,11 @@ const Submission = {
             },
             body: JSON.stringify(data)
         });
-        
+
         if (!response.ok) {
             throw new Error('Submission failed');
         }
-        
+
         return response;
     },
 
@@ -55,7 +55,7 @@ const Submission = {
         console.log('Submission data:', data);
         button.innerHTML = '✅ Data Captured Successfully!';
         button.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
-        
+
         setTimeout(() => {
             this.resetApp();
         }, CONFIG.ANIMATION_DELAYS.RESET);

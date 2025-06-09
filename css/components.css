@@ -12,7 +12,7 @@
 .shape {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(247, 180, 155, 0.15);
     animation: float 6s ease-in-out infinite;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .cta-button {
-    background: linear-gradient(135deg, #ff6b9d, #c44569);
+    background: linear-gradient(135deg, #f7b49b, #e89a7e);
     color: white;
     border: none;
     padding: 15px 40px;
@@ -52,11 +52,13 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 8px 25px rgba(232, 154, 126, 0.3);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 107, 157, 0.4);
+    box-shadow: 0 12px 30px rgba(232, 154, 126, 0.4);
+    background: linear-gradient(135deg, #e89a7e, #d4806b);
 }
 
 .cta-button:active {
@@ -65,10 +67,10 @@
 
 .nav-button {
     padding: 12px 25px;
-    border: 2px solid #667eea;
+    border: 2px solid #e89a7e;
     border-radius: 25px;
     background: transparent;
-    color: #667eea;
+    color: #d4806b;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -76,26 +78,29 @@
 }
 
 .nav-button:hover {
-    background: #667eea;
+    background: #e89a7e;
     color: white;
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(232, 154, 126, 0.3);
 }
 
 .nav-button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
     transform: none;
+    box-shadow: none;
 }
 
 .nav-button.primary {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #f7b49b, #e89a7e);
     color: white;
     border-color: transparent;
 }
 
 .nav-button.primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 5px 15px rgba(232, 154, 126, 0.4);
+    background: linear-gradient(135deg, #e89a7e, #d4806b);
 }
 
 .navigation {
@@ -118,8 +123,8 @@
     position: fixed;
     top: 20px;
     right: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(247, 180, 155, 0.3);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -127,9 +132,11 @@
     font-size: 1.2rem;
     transition: all 0.3s ease;
     z-index: 1000;
+    box-shadow: 0 4px 15px rgba(232, 154, 126, 0.2);
 }
 
 .music-toggle:hover {
     transform: scale(1.1);
     background: white;
+    box-shadow: 0 6px 20px rgba(232, 154, 126, 0.3);
 }
