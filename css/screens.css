@@ -1,0 +1,180 @@
+/* screens.css - Individual screen styles */
+        /* Landing Screen */
+        .landing-title {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            animation: heartBeat 2s ease-in-out infinite;
+        }
+
+        .landing-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        /* User Info Screen */
+        .user-info-title {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .input-group {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .input-label {
+            display: block;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .user-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e1e8f0;
+            border-radius: 15px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .user-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            background: white;
+        }
+
+        /* Quiz Screen */
+        .quiz-header {
+            margin-bottom: 30px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e1e8f0;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 3px;
+            transition: width 0.5s ease;
+        }
+
+        .question-number {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .question-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        .answers {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .answer-option {
+            padding: 15px 20px;
+            border: 2px solid #e1e8f0;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .answer-option:hover {
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .answer-option.selected {
+            border-color: #667eea;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .answer-option.selected::after {
+            content: '💝';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: heartPulse 1s ease-in-out;
+        }
+
+        /* Thank You Screen */
+        .thank-you-title {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            animation: celebration 2s ease-in-out;
+        }
+
+        .thank-you-message {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            top: 0;
+            left: 0;
+        }
+
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ff6b9d;
+            animation: confettiFall 3s linear infinite;
+        }
+
+        .confetti-piece:nth-child(odd) {
+            background: #667eea;
+            animation-delay: 0.5s;
+        }
+
+        .confetti-piece:nth-child(3n) {
+            background: #764ba2;
+            animation-delay: 1s;
+        }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match X Score - Relationship Compatibility Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/screens.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+    <!-- Background Shapes -->
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- Music Toggle -->
+    <button class="music-toggle" id="musicToggle">🎵</button>
+
+    <div class="container">
+        <div class="card">
+            <!-- Landing Screen -->
+            <div class="screen active" id="landingScreen">
+                <h1 class="landing-title">Match X Score</h1>
+                <p class="landing-subtitle">
+                    Helps you verify your partner's interest to avoid surprises later. 💕
+                </p>
+                <button class="cta-button" onclick="UI.startQuiz()">
+                    Start Now ✨
+                </button>
+            </div>
+
+            <!-- User Info Screen -->
+            <div class="screen" id="userInfoScreen">
+                <h2 class="user-info-title">
+                    👋 Let's get to know you!
+                </h2>
+                <div class="input-group">
+                    <label class="input-label" for="userName">What's your name? 💖</label>
+                    <input type="text" id="userName" class="user-input" placeholder="Enter your beautiful name..."
+                        maxlength="50">
+                </div>
+                <div class="navigation">
+                    <button class="nav-button" onclick="UI.goToScreen('landingScreen')">Back</button>
+                    <button class="nav-button primary" onclick="Quiz.startQuestions()">Continue</button>
+                </div>
+            </div>
+
+            <!-- Quiz Screen -->
+            <div class="screen" id="quizScreen">
+                <div class="quiz-header">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="question-number" id="questionNumber">Question 1 of 5</div>
+                </div>
+
+                <h3 class="question-text" id="questionText"></h3>
+
+                <div class="answers" id="answersContainer"></div>
+
+                <div class="navigation">
+                    <button class="nav-button" id="backButton" onclick="Quiz.previousQuestion()">Back</button>
+                    <button class="nav-button primary" id="nextButton" onclick="Quiz.nextQuestion()"
+                        disabled>Next</button>
+                </div>
+            </div>
+
+            <!-- Thank You Screen -->
+            <div class="screen" id="thankYouScreen">
+                <div class="confetti" id="confetti"></div>
+                <h2 class="thank-you-title">🎉 Amazing!</h2>
+                <p class="thank-you-message" id="thankYouMessage"></p>
+                <button class="cta-button" onclick="Submission.submitResults()" id="submitButton">
+                    Submit Results 💕
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Modules -->
+    <script src="js/config.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/thankyou.js"></script>
+    <script src="js/submission.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
