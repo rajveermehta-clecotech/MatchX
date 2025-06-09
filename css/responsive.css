@@ -1,7 +1,7 @@
 /* responsive.css - Media queries and responsive design */
 @media (max-width: 768px) {
     .card {
-        padding: 30px 20px;
+        padding: 50px 50px;
         margin: 10px;
         border-radius: 20px;
     }

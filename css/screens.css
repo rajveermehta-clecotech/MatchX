@@ -132,7 +132,7 @@
 }
 
 .answer-option.selected::after {
-    content: '🍑';
+    content: '👍';
     position: absolute;
     right: 20px;
     top: 50%;

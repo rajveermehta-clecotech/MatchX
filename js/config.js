@@ -44,7 +44,7 @@ const QUESTIONS = [
         answers: [
             "Words of affirmation",
             "Quality time together",
-            "Physical affection",
+            "Love affection",
             "Acts of service"
         ]
     },
